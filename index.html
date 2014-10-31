@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HTML5 Audio Player</title>
+
+  <!-- Favicon(s) -->
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon.png">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+  
+
+  <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="components/hljs/css/highlight-zenburn.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" style="">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <span>HTML5 Audio Player</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="wrap" style="padding-top:75px;">
+  <div class="container">
+    
+
+    <section class="row">
+      <div class="jumbotron">
+        <h2>HTML5 Audio Player</h2>
+        <hr>
+        <h5>Supports:</h5>
+        <ul>
+          <li>Pause/play</li>
+          <li>Timeline jumping</li>
+          <li>Volume control</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="row" style="margin-bottom:40px;">
+      
+        
+        <audio id="audio" preload="true" loop="false">
+          <source src="audio/audio-sample.mp3">
+        </audio>
+        
+        <div id="player">
+          <div id="player-timeline">
+            <div id="player-info--current_time">00:00:00</div>
+            <div id="player-info--duration"></div>
+            <div id="player-timeline--progress"></div>
+          </div>
+
+          <div class="player-actions clearfix">
+            <div class="player-action--left">
+              <button id="player-action--reverse" class="fa fa-backward"></button>  
+              <button id="player-action--play" class="fa fa-play"></button>  
+              <button id="player-action--fast_forward" class="fa fa-forward"></button>
+            </div>
+            <div class="player-action--right">
+              <button id="player-action--volume_toggle" class="fa fa-volume-up">
+                <input id="player-action--volume" type="range" name="points" min="0" max="100" value="100">
+              </button>  
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+
+    </section>
+
+
+
+
+    
+    <section id="debug" class="row" style="display:none;">
+        <h3>Debug</h3>
+        <pre class="hljs"><code id="output--debug" class="ini" style="height:300px;overflow-y:scroll;"></code></pre>
+    </section>
+
+  </div>
+</div>
+  
+
+<!-- Javascript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="components/hljs/highlight.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="js/app.js"></script>
+
+<script>
+  
+  
+</script>
+
+</body>
+</html>
